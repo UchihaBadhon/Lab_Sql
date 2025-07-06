@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+   char arr[800];
+   scanf("%[^$]", arr);
+  // printf("%s", arr);
+
+
+   int single = 0, dbl = 0;
+   int i = 0;
+   while( arr[i] != '\0' ){
+
+    //checking single comment line
+    if( arr[i] == '/' && arr[i+1] == '/' ){
+        single++;
+        printf("Single comment %d: ", single);
+        while( arr[i] != '\n' && arr[i] != '\0' ){
+            printf("%c", arr[i]);
+            i++;
+        }
+        printf("\n");
+    }
+
+    //checking double comment
+   else if( arr[i] == '/' && arr[i+1] == '*' ){
+        dbl++;
+        i+=2;
+        printf("Double comment %d: ", dbl);
+        while( (arr[i] != '*' && arr[i+1] != '/') && arr[i] != '\0' ){
+            printf("%c", arr[i]);
+            i++;
+        }
+        printf("\n");
+    }
+    else{
+        i++;
+    }
+   }
+}
