@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+//Write a C Program that will remove white spaces from a string.
+int main()
+{
+    char ch[50], temp[50];
+    gets(ch);
+    int cnt = 0,i = 0, j = 0;
+    while( ch[i] != '\0' )
+    {
+        if( ch[i] != ' ')
+        {
+            temp[j] = ch[i];
+    j++;
+        }
+
+        i++;
+    }
+    temp[j] = '\0';
+    printf("Updated string: %s", temp);
+}
