@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+//Write a C Program that will count length of string.
+int main(){
+char ch[50];
+gets(ch);
+int cnt = 0,i = 0;
+while( ch[i] != '\0' ){
+    cnt++;
+    i++;
+}
+printf("count: %d", cnt);
+}
