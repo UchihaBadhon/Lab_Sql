@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+//Write a C Program that will count the number of white spaces in a string.
+int main()
+{
+    char ch[50];
+    gets(ch);
+    int cnt = 0,i = 0;
+    while( ch[i] != '\0' )
+    {
+        if( ch[i] == ' ')
+        {
+            cnt++;
+        }
+
+        i++;
+    }
+    printf("count: %d", cnt);
+}
