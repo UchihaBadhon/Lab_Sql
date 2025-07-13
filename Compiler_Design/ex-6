@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+//Write a C program that will take multiple lines as input and count the number of lines.
+int main()
+{
+    char ch[200], temp[50];
+    scanf("%[^$]", ch);
+    int cnt = 0,i = 0, j = 0;
+
+    while( ch[i] != '\0' ){
+        if( ch[i] == '\n'){
+            cnt++;
+        }
+        i++;
+    }
+    printf( "%d", cnt );
+
+}
